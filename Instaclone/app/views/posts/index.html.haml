@@ -1,1 +1,16 @@
-%h1 Instaclone
+.posts-wrapper.row
+-@posts.each do |post|
+  .post
+    .post-head
+      .name
+        Avleen Dhaliwal
+  .image.center-block
+
+    =link_to (image_tag post.image.url(:medium), class: 'responsive-img'), post_path(post)
+    %p.caption
+    =post.caption
+
+
+
+
+
