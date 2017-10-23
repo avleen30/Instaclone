@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like]
   before_action :owned_post, only: [:edit, :update, :destroy]
 
   def index
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:success] = "Your post has been created!"
-      redirect_to posts_path
+      redirect_to root_path
     else
       flash[:alert] = "Your new post couldn't be created!  Please check the form."
       render :new
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
       flash[:success] = "Post updated."
       redirect_to root_path
     else
-      flash.now[:alert] = "Update failed.  Please check the form."
+      flash[:alert] = "Update failed.  Please check the form."
       render :edit
     end
   end
@@ -43,6 +43,15 @@ class PostsController < ApplicationController
     @post.destroy
     flash[:success] = "Your post has been deleted."
     redirect_to root_path
+  end
+
+  def like
+    if @post.liked_by current_user
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.js
+      end
+    end
   end
 
   private
