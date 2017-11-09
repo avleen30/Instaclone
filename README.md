@@ -1,24 +1,17 @@
-# README
+# Instaclone is a social app that is a clone of Instagram built with Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Screenshots
+![Home Page](https://github.com/avleen30/Instaclone/blob/master/Instaclone/Docs/home.png)
+![login Page](https://github.com/avleen30/Instaclone/blob/master/Instaclone/Docs/login.png)
+![pagination Page](https://github.com/avleen30/Instaclone/blob/master/Instaclone/Docs/pagination.png)
 
-Things you may want to cover:
+## Setup
+1. git clone
+2. cd Instaclone
+3. bundle install
+4. bin/rails db:migrate
+5. bin/rails db:seed
+6. bin/rails s to start server
+7. Open http://localhost:3000
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### credits - Ben Walker for this great tutorial - https://www.devwalks.com/lets-build-instagram-in-rails-part-1/
