@@ -10,6 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.action_cable.url = ENV['REDIS_URL']
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -26,6 +27,7 @@ Rails.application.configure do
   config.assets.compile = false
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
+
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
@@ -54,7 +56,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "Instaclone_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "final_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
