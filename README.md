@@ -1,9 +1,9 @@
 # Instaclone is a social app that is a clone of Instagram built with Ruby on Rails
 
 ## Screenshots
-![Home Page](https://github.com/avleen30/Instaclone/blob/master/Instaclone/Docs/home.png)
-![login Page](https://github.com/avleen30/Instaclone/blob/master/Instaclone/Docs/login.png)
-![pagination Page](https://github.com/avleen30/Instaclone/blob/master/Instaclone/Docs/pagination.png)
+![Home Page](https://github.com/avleen30/Instaclone/blob/master/Docs/home.png)
+![login Page](https://github.com/avleen30/Instaclone/blob/master/Docs/login.png)
+![pagination Page](https://github.com/avleen30/Instaclone/blob/master/Docs/pagination.png)
 
 ## Setup
 1. git clone
